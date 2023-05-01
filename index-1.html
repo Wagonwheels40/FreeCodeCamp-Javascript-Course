@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assigning the Value of One Variable to Another</title>
+    <script>
+        function assignValues() {
+            var input1 = document.getElementById("input1").value;
+            var input2 = document.getElementById("input2");
+            input2.value = input1;
+        }
+    </script>
+</head>
+<body>
+    <label for="input1">Enter a value:</label>
+    <input type="text" id="input1"><br><br>
+    <label for="input2">Variable value:</label>
+    <input type="text" id="input2">
+    <button onclick="assignValues()">Assign value to variable</button><br><br>
+</body>
+</html>
+
+<!-- Assigning the Value of One Variable to Another -->
