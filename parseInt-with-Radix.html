@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Number Converter</title>
+    </head>
+    <body>
+        <h1>Number Converter</h1>
+        <p>Please enter a number in binary, octal, or hexadecimal format:</p>
+        <input type="text" id="number-input">
+        <button onclick="convertNumber()">Convert</button>
+        <p id="result"></p>
+
+        <script>
+            function convertNumber() {
+                const input = document.getElementById("number-input").value;
+                let decimal;
+
+                if (input.startsWith("Ob")) {
+                    // Binary format (starts with "Ob")
+                    decimal = parseInt(input.slice(2), 2);
+                } else if (input.startsWith("Oo")) {
+                    // Octal format (starts with "Oo")
+                    decimal = parseInt(input.slice(2), 8);
+                } else if (input.startsWith("Ox")) {
+                    // Hexadecimal format (starts with "Ox")
+                    decimal = parseInt(input.slice(2), 16);
+                } else {
+                    // Decimal format
+                    decimal = parseInt(input);
+                }
+
+                document.getElementById("result").innerHTML = `The decimal equivalent of ${input} is ${decimal}.`;
+            }
+        </script>
+    </body>
+</html>
