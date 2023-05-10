@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random whole numbers with a range</title>
+</head>
+    <body>
+        <h1>Random Number Generator</h1>
+        <form>
+        <label for="min">Minimum number:</label>
+        <input type="number" id="min" name="min" value="1">
+        <br>
+        <label for="max">Maximum number:</label>
+        <input type="number" id="max" name="max" value="100">
+        <br>
+        <button type="button" onclick="generateRandomNumber()">Generate</button>
+        </form>
+        <h2 id="result"></h2>
+        <script>
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function generateRandomNumber() {
+                const min = parseInt(document.getElementById('min').value);
+                const max = parseInt(document.getElementById('max').value);
+                const randomNumber = getRandomInt(min, max);
+                document.getElementById('result').textContent = `Your random number is: ${randomNumber}`;
+            }
+        </script>
+    </body>
+</html>
