@@ -4,7 +4,7 @@ var myArray = [["this is the first position", 11], ["the second position", 22]];
 
 console.log(myArray[0][1]);
 
-// Change it below //
+// My own below //
 
 var geogaphyNumbers = [["Countries in Euriope", 44], ["Countries in Asia", 48]];
 
